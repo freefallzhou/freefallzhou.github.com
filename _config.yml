@@ -4,10 +4,11 @@
 
 # Site
 title: Yangs Blog
+
 subtitle:
 description:
-#author: Yang Zhou
-language: zh-CN
+author: Yang
+language: zh-Hans
 timezone: UTC
 
 # URL
@@ -72,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: pacman
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -80,4 +81,3 @@ deploy:
   type: git
   repo: git@github.com:freefallzhou/freefallzhou.github.com.git
   branch: master
-
