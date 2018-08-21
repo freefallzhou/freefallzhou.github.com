@@ -3,11 +3,21 @@
   
     
     <entry>
-      <title>Hello World</title>
-      <link href="/2018/08/16/hello-world/"/>
-      <url>/2018/08/16/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      <title>[OWSAP] SESSION MANAGEMENT(会话管理)</title>
+      <link href="/2018/08/21/OWSAP-SESSION-MANAGEMENT-%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86/"/>
+      <url>/2018/08/21/OWSAP-SESSION-MANAGEMENT-%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86/</url>
+      <content type="html"><![CDATA[<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc --><p><strong>Table of Contents</strong></p><ul><li><a href="#简介">简介</a><ul><li><a href="#授权-会话管理-访问控制">授权, 会话管理, 访问控制</a></li></ul></li></ul><!-- markdown-toc end --><h1><span id="简介">简介</span></h1><h2><span id="授权-会话管理-访问控制">授权, 会话管理, 访问控制</span></h2><p>一个web session指的是:</p><blockquote><p>同一个用户的一系列http请求与响应。</p></blockquote><p>业务中经常需要对同一个用户在一系列操作中保存用户信息，状态的需求。比如访问权限，地域设置等。</p><p>我们比较关注的是访问权限的控制。http协议是一个无状态协议<a href="https://tools.ietf.org/html/rfc2616" target="_blank" rel="noopener">RFC2616 [5]</a> </p><blockquote><p>每一个请求与响应的状态是独立的</p></blockquote><p>所以我们需要保持用户的信息，这里引入会话管理的概念，会话管理的简图如下：</p><p><img src="fig1.png" alt="session management"></p><p><a href="https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Introduction" target="_blank" rel="noopener">OWSAP Session Management Cheat Sheet</a></p>]]></content>
       
+      
+        <tags>
+            
+            <tag> OWSAP </tag>
+            
+            <tag> SESSION </tag>
+            
+            <tag> 会话管理 </tag>
+            
+        </tags>
       
     </entry>
     
