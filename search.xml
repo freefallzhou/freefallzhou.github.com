@@ -4,9 +4,9 @@
     
     <entry>
       <title>[OWSAP] SESSION MANAGEMENT(会话管理)</title>
-      <link href="/2018/08/21/OWSAP-SESSION-MANAGEMENT-%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86/"/>
-      <url>/2018/08/21/OWSAP-SESSION-MANAGEMENT-%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86/</url>
-      <content type="html"><![CDATA[<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc --><p><strong>Table of Contents</strong></p><ul><li><a href="#简介">简介</a><ul><li><a href="#授权-会话管理-访问控制">授权, 会话管理, 访问控制</a></li></ul></li></ul><!-- markdown-toc end --><h1><span id="简介">简介</span></h1><h2><span id="授权-会话管理-访问控制">授权, 会话管理, 访问控制</span></h2><p>一个web session指的是:</p><blockquote><p>同一个用户的一系列http请求与响应。</p></blockquote><p>业务中经常需要对同一个用户在一系列操作中保存用户信息，状态的需求。比如访问权限，地域设置等。</p><p>我们比较关注的是访问权限的控制。http协议是一个无状态协议<a href="https://tools.ietf.org/html/rfc2616" target="_blank" rel="noopener">RFC2616 [5]</a> </p><blockquote><p>每一个请求与响应的状态是独立的</p></blockquote><p>所以我们需要保持用户的信息，这里引入会话管理的概念，会话管理的简图如下：</p><p><img src="fig1.png" alt="session management"></p><p><a href="https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Introduction" target="_blank" rel="noopener">OWSAP Session Management Cheat Sheet</a></p>]]></content>
+      <link href="/2018/08/22/OWSAP-SESSION-MANAGEMENT-%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86/"/>
+      <url>/2018/08/22/OWSAP-SESSION-MANAGEMENT-%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86/</url>
+      <content type="html"><![CDATA[<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc --><p><strong>Table of Contents</strong></p><ul><li><a href="#简介">简介</a><ul><li><a href="#授权-会话管理-访问控制">授权, 会话管理, 访问控制</a></li></ul></li></ul><!-- markdown-toc end --><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h2 id="授权-会话管理-访问控制"><a href="#授权-会话管理-访问控制" class="headerlink" title="授权, 会话管理, 访问控制"></a>授权, 会话管理, 访问控制</h2><p>一个web session指的是:</p><blockquote><p>同一个用户的一系列http请求与响应。</p></blockquote><p>业务中经常需要对同一个用户在一系列操作中保存用户信息，状态的需求。比如访问权限，地域设置等。</p><p>我们比较关注的是访问权限的控制。http协议是一个无状态协议RFC2616 [5]</p><blockquote><p>每一个请求与响应的状态是独立的</p></blockquote><p>所以我们需要保持用户的信息，这里引入会话管理的概念，会话管理的简图如下：</p><p><img src="fig1.png" alt="session management"></p><p><a href="https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Introduction" target="_blank" rel="noopener">OWSAP Session Management Cheat Sheet</a></p>]]></content>
       
       
         <tags>
@@ -14,8 +14,6 @@
             <tag> OWSAP </tag>
             
             <tag> SESSION </tag>
-            
-            <tag> 会话管理 </tag>
             
         </tags>
       
