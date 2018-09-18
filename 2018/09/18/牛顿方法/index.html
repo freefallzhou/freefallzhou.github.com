@@ -119,27 +119,25 @@
 
 
 
-  <meta name="description" content="Table of Contents  简介 授权, 会话管理, 访问控制   Session Id 的性质 Session Id 的名称 Session Id 的长度 Session Id 的信息熵 Session Id 的value   会话管理的实现 Built-in 会话管理机制的实现     简介授权, 会话管理, 访问控制一个web session指的是:  同一个用户的一系列http">
-<meta name="keywords" content="OWSAP,SESSION,WEB">
+  <meta name="description" content="Steady like an old dog">
+<meta name="keywords" content="机器学习,牛顿方法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[OWSAP] SESSION MANAGEMENT(会话管理)">
-<meta property="og:url" content="http://yoursite.com/2018/08/22/OWSAP-SESSION-MANAGEMENT-会话管理/index.html">
+<meta property="og:title" content="牛顿方法">
+<meta property="og:url" content="http://yoursite.com/2018/09/18/牛顿方法/index.html">
 <meta property="og:site_name" content="Yang&#39;s Blog">
-<meta property="og:description" content="Table of Contents  简介 授权, 会话管理, 访问控制   Session Id 的性质 Session Id 的名称 Session Id 的长度 Session Id 的信息熵 Session Id 的value   会话管理的实现 Built-in 会话管理机制的实现     简介授权, 会话管理, 访问控制一个web session指的是:  同一个用户的一系列http">
+<meta property="og:description" content="Steady like an old dog">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2018/08/22/OWSAP-SESSION-MANAGEMENT-会话管理/fig1.png">
-<meta property="og:updated_time" content="2018-08-30T07:08:42.936Z">
+<meta property="og:updated_time" content="2018-09-18T03:00:33.837Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[OWSAP] SESSION MANAGEMENT(会话管理)">
-<meta name="twitter:description" content="Table of Contents  简介 授权, 会话管理, 访问控制   Session Id 的性质 Session Id 的名称 Session Id 的长度 Session Id 的信息熵 Session Id 的value   会话管理的实现 Built-in 会话管理机制的实现     简介授权, 会话管理, 访问控制一个web session指的是:  同一个用户的一系列http">
-<meta name="twitter:image" content="http://yoursite.com/2018/08/22/OWSAP-SESSION-MANAGEMENT-会话管理/fig1.png">
+<meta name="twitter:title" content="牛顿方法">
+<meta name="twitter:description" content="Steady like an old dog">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/22/OWSAP-SESSION-MANAGEMENT-会话管理/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/18/牛顿方法/"/>
 
 
 
@@ -149,7 +147,7 @@
   };
 </script>
 
-  <title>[OWSAP] SESSION MANAGEMENT(会话管理) | Yang's Blog</title>
+  <title>牛顿方法 | Yang's Blog</title>
   
 
 
@@ -328,7 +326,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/22/OWSAP-SESSION-MANAGEMENT-会话管理/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/18/牛顿方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yang Zhou">
@@ -345,7 +343,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[OWSAP] SESSION MANAGEMENT(会话管理)
+          <h1 class="post-title" itemprop="name headline">牛顿方法
               
             
           </h1>
@@ -370,24 +368,12 @@
                 
               
 
-              <time title="Created: 2018-08-22 12:34:37" itemprop="dateCreated datePublished" datetime="2018-08-22T12:34:37+08:00">2018-08-22</time>
+              <time title="Created: 2018-09-18 10:59:10 / Modified: 11:00:33" itemprop="dateCreated datePublished" datetime="2018-09-18T10:59:10+08:00">2018-09-18</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-08-30 15:08:42" itemprop="dateModified" datetime="2018-08-30T15:08:42+08:00">2018-08-30</time>
               
             
           </span>
@@ -420,53 +406,7 @@
       
 
       
-        <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-<p><strong>Table of Contents</strong></p>
-<ul>
-<li><a href="#简介">简介</a><ul>
-<li><a href="#授权-会话管理-访问控制">授权, 会话管理, 访问控制</a></li>
-</ul>
-</li>
-<li><a href="#session-id-的性质">Session Id 的性质</a><ul>
-<li><a href="#session-id-的名称">Session Id 的名称</a></li>
-<li><a href="#session-id-的长度">Session Id 的长度</a></li>
-<li><a href="#session-id-的信息熵">Session Id 的信息熵</a></li>
-<li><a href="#session-id-的value">Session Id 的value</a></li>
-</ul>
-</li>
-<li><a href="#会话管理的实现">会话管理的实现</a><ul>
-<li><a href="#built-in-会话管理机制的实现">Built-in 会话管理机制的实现</a></li>
-</ul>
-</li>
-</ul>
-<!-- markdown-toc end -->
-<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h2 id="授权-会话管理-访问控制"><a href="#授权-会话管理-访问控制" class="headerlink" title="授权, 会话管理, 访问控制"></a>授权, 会话管理, 访问控制</h2><p>一个web session指的是:</p>
-<blockquote>
-<p>同一个用户的一系列http请求与响应。</p>
-</blockquote>
-<p>业务中经常需要对同一个用户在一系列操作中保存用户信息，状态的需求。比如访问权限，地域设置等。</p>
-<p>我们比较关注的是访问权限的控制。http协议是一个无状态协议RFC2616 [5]</p>
-<blockquote>
-<p>每一个请求与响应的状态是独立的</p>
-</blockquote>
-<p>所以我们需要保持用户的信息，这里引入会话管理的概念，会话管理的简图如下：</p>
-<p><img src="fig1.png" alt="session management"></p>
-<p>一般情况下，用户在得到访问授权之后，会得到一个session ID, 或者token, 这个标记会记录在之后的http请求交互中, 这个标识将用于用户之后的访问行为中标识用户已经拥有权限的标记。这个标记在之后的鉴权中，效果等同于应用的最高安全等级验证方式（密码，人脸，短信，视网膜等等）。由此这样一个标记的安全性是非常关键的。</p>
-<blockquote>
-<p>在这样一个无状态的协议中，我们不得不将权限控制分成如上所述的三个部分。另外常用的web框架中对这三个模块的定义也不严格。所以这部分的工作一般是开发者手动实现的。所以实现一个安全的会话管理是很有挑战的。</p>
-</blockquote>
-<p>对于session ID的泄露, 盗取, 预测, 暴力破解, 修复等等行为，都能导致session劫持。而这种攻击的后果是攻击者将获取受害者在业务中的所有权限。</p>
-<p>而一般的常见攻击行为大致可以分为两类，针对性攻击，以及无差别攻击。</p>
-<h1 id="Session-Id-的性质"><a href="#Session-Id-的性质" class="headerlink" title="Session Id 的性质"></a>Session Id 的性质</h1><p>为了保持对用户操作序列的感知，以及对用户权限的感知。应用一般会在session创建的时候颁布一个session的唯一标识（Session Id 或者 token）,这个标识会在用户与业务端交互中在前后端传递。Session Id 是一个 name = value 的属性。</p>
-<h2 id="Session-Id-的名称"><a href="#Session-Id-的名称" class="headerlink" title="Session Id 的名称"></a>Session Id 的名称</h2><p>Session Id 的名称应当不包含任何信息不必要的信息。大部分的web框架会有默认session id名称规则，从session id的名称，可以反推出网站所用框架，这样会给攻击者提供关键信息。</p>
-<h2 id="Session-Id-的长度"><a href="#Session-Id-的长度" class="headerlink" title="Session Id 的长度"></a>Session Id 的长度</h2><p>Session Id 的长度至少要128bit来防止暴力破解。</p>
-<h2 id="Session-Id-的信息熵"><a href="#Session-Id-的信息熵" class="headerlink" title="Session Id 的信息熵"></a>Session Id 的信息熵</h2><p>Session Id 的信息熵至少64bit。并且要足够随机，以预防猜测破解。</p>
-<h2 id="Session-Id-的value"><a href="#Session-Id-的value" class="headerlink" title="Session Id 的value"></a>Session Id 的value</h2><p>Session Id 应当仅仅是一个标识，不包含任何敏感信息，以预防信息泄露以及利用已经泄露的敏感信息来生成session id。</p>
-<h1 id="会话管理的实现"><a href="#会话管理的实现" class="headerlink" title="会话管理的实现"></a>会话管理的实现</h1><p>会话管理的实现决定用户与应用交换以及会话信息的机制。在http协议中有多种机制可以用来保持会话状态，例如 cookie， url_rewrite, url_param(GET), url_body(POST), html中的隐藏信息，或者一些http的header。</p>
-<p>Session Id 的交换机制，需要满足对一般token的性能要求。比较推荐的会话机制是使用cookie<br><a href="https://tools.ietf.org/html/rfc6265" target="_blank" rel="noopener">(RFCs 2109 &amp; 2965 &amp; 6265 [1])</a></p>
-<p>一些容易暴露Session Id的机制，比如url参数，会暴露session id。比如浏览器书签等方式，这样导致的session id泄露会导致其他威胁。</p>
-<h2 id="Built-in-会话管理机制的实现"><a href="#Built-in-会话管理机制的实现" class="headerlink" title="Built-in 会话管理机制的实现"></a>Built-in 会话管理机制的实现</h2><p><a href="https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Introduction" target="_blank" rel="noopener">OWSAP Session Management Cheat Sheet</a></p>
-
+        
       
     </div>
 
@@ -486,11 +426,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/OWSAP/" rel="tag"># OWSAP</a>
+            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
           
-            <a href="/tags/SESSION/" rel="tag"># SESSION</a>
-          
-            <a href="/tags/WEB/" rel="tag"># WEB</a>
+            <a href="/tags/牛顿方法/" rel="tag"># 牛顿方法</a>
           
         </div>
       
@@ -499,6 +437,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/22/OWSAP-SESSION-MANAGEMENT-会话管理/" rel="next" title="[OWSAP] SESSION MANAGEMENT(会话管理)">
+                <i class="fa fa-chevron-left"></i> [OWSAP] SESSION MANAGEMENT(会话管理)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
@@ -540,17 +494,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -565,7 +510,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -590,7 +535,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -616,22 +561,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#授权-会话管理-访问控制"><span class="nav-number">1.1.</span> <span class="nav-text">授权, 会话管理, 访问控制</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Session-Id-的性质"><span class="nav-number">2.</span> <span class="nav-text">Session Id 的性质</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Session-Id-的名称"><span class="nav-number">2.1.</span> <span class="nav-text">Session Id 的名称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Session-Id-的长度"><span class="nav-number">2.2.</span> <span class="nav-text">Session Id 的长度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Session-Id-的信息熵"><span class="nav-number">2.3.</span> <span class="nav-text">Session Id 的信息熵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Session-Id-的value"><span class="nav-number">2.4.</span> <span class="nav-text">Session Id 的value</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#会话管理的实现"><span class="nav-number">3.</span> <span class="nav-text">会话管理的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Built-in-会话管理机制的实现"><span class="nav-number">3.1.</span> <span class="nav-text">Built-in 会话管理机制的实现</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
