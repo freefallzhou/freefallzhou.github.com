@@ -119,19 +119,19 @@
 
 
 
-  <meta name="description" content="Table of Contents  简介  授权, 会话管理, 访问控制  Session Id 的性质  Session Id 的名称 Session Id 的长度 Session Id 的信息熵 Session Id 的value  会话管理的实现  Built-in 会话管理机制的实现    简介 授权, 会话管理, 访问控制 一个web session指的是:  同一个用户的一系列ht">
+  <meta name="description" content="简介 授权, 会话管理, 访问控制 一个web session指的是:  同一个用户的一系列http请求与响应。  业务中经常需要对同一个用户在一系列操作中保存用户信息，状态的需求。比如访问权限，地域设置等。 我们比较关注的是访问权限的控制。http协议是一个无状态协议RFC2616 [5]  每一个请求与响应的状态是独立的  所以我们需要保持用户的信息，这里引入会话管理的概念，会话管理的简图如下">
 <meta name="keywords" content="OWSAP,SESSION,WEB">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[OWSAP] SESSION MANAGEMENT(会话管理)">
 <meta property="og:url" content="http://yoursite.com/2018/08/22/OWSAP-SESSION-MANAGEMENT-会话管理/index.html">
 <meta property="og:site_name" content="Yang&#39;s Blog">
-<meta property="og:description" content="Table of Contents  简介  授权, 会话管理, 访问控制  Session Id 的性质  Session Id 的名称 Session Id 的长度 Session Id 的信息熵 Session Id 的value  会话管理的实现  Built-in 会话管理机制的实现    简介 授权, 会话管理, 访问控制 一个web session指的是:  同一个用户的一系列ht">
+<meta property="og:description" content="简介 授权, 会话管理, 访问控制 一个web session指的是:  同一个用户的一系列http请求与响应。  业务中经常需要对同一个用户在一系列操作中保存用户信息，状态的需求。比如访问权限，地域设置等。 我们比较关注的是访问权限的控制。http协议是一个无状态协议RFC2616 [5]  每一个请求与响应的状态是独立的  所以我们需要保持用户的信息，这里引入会话管理的概念，会话管理的简图如下">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2018/08/22/OWSAP-SESSION-MANAGEMENT-会话管理/fig1.png">
-<meta property="og:updated_time" content="2018-09-18T05:52:19.343Z">
+<meta property="og:updated_time" content="2018-09-18T09:15:35.628Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[OWSAP] SESSION MANAGEMENT(会话管理)">
-<meta name="twitter:description" content="Table of Contents  简介  授权, 会话管理, 访问控制  Session Id 的性质  Session Id 的名称 Session Id 的长度 Session Id 的信息熵 Session Id 的value  会话管理的实现  Built-in 会话管理机制的实现    简介 授权, 会话管理, 访问控制 一个web session指的是:  同一个用户的一系列ht">
+<meta name="twitter:description" content="简介 授权, 会话管理, 访问控制 一个web session指的是:  同一个用户的一系列http请求与响应。  业务中经常需要对同一个用户在一系列操作中保存用户信息，状态的需求。比如访问权限，地域设置等。 我们比较关注的是访问权限的控制。http协议是一个无状态协议RFC2616 [5]  每一个请求与响应的状态是独立的  所以我们需要保持用户的信息，这里引入会话管理的概念，会话管理的简图如下">
 <meta name="twitter:image" content="http://yoursite.com/2018/08/22/OWSAP-SESSION-MANAGEMENT-会话管理/fig1.png">
 
 
@@ -410,7 +410,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-18 13:52:19" itemprop="dateModified" datetime="2018-09-18T13:52:19+08:00">2018-09-18</time>
+                <time title="Modified: 2018-09-18 17:15:35" itemprop="dateModified" datetime="2018-09-18T17:15:35+08:00">2018-09-18</time>
               
             
           </span>
@@ -461,27 +461,7 @@
       
 
       
-        <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-<p><strong>Table of Contents</strong></p>
-<ul>
-<li><a href="#简介">简介</a>
-<ul>
-<li><a href="#授权-会话管理-访问控制">授权, 会话管理, 访问控制</a></li>
-</ul></li>
-<li><a href="#session-id-的性质">Session Id 的性质</a>
-<ul>
-<li><a href="#session-id-的名称">Session Id 的名称</a></li>
-<li><a href="#session-id-的长度">Session Id 的长度</a></li>
-<li><a href="#session-id-的信息熵">Session Id 的信息熵</a></li>
-<li><a href="#session-id-的value">Session Id 的value</a></li>
-</ul></li>
-<li><a href="#会话管理的实现">会话管理的实现</a>
-<ul>
-<li><a href="#built-in-会话管理机制的实现">Built-in 会话管理机制的实现</a></li>
-</ul></li>
-</ul>
-<!-- markdown-toc end -->
-<h1 id="简介">简介</h1>
+        <h1 id="简介">简介</h1>
 <h2 id="授权-会话管理-访问控制">授权, 会话管理, 访问控制</h2>
 <p>一个web session指的是:</p>
 <blockquote>

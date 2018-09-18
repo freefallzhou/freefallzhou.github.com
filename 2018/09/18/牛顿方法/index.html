@@ -127,7 +127,7 @@
 <meta property="og:site_name" content="Yang&#39;s Blog">
 <meta property="og:description" content="李航的《统计学习方法》中，指出机器学习的三个要素为：模型，策略，算法。牛顿法是求解无约束最优化问题的常用方法。有收敛速度快的优点。这里我们从实现的角度来介绍一下这个方法。  牛顿法简介 牛顿法是微积分学中, 通过迭代以求解可微函数 \(f\) 的零点的一种算法 (即求 \(x\) 使得 \(f(x)=0\)). 而在最优化中, 牛顿法通常被运用于求解一个二次可微函数 \(f\) 的一阶导数 \(">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-18T09:12:08.894Z">
+<meta property="og:updated_time" content="2018-09-18T09:15:01.148Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python实现牛顿方法">
 <meta name="twitter:description" content="李航的《统计学习方法》中，指出机器学习的三个要素为：模型，策略，算法。牛顿法是求解无约束最优化问题的常用方法。有收敛速度快的优点。这里我们从实现的角度来介绍一下这个方法。  牛顿法简介 牛顿法是微积分学中, 通过迭代以求解可微函数 \(f\) 的零点的一种算法 (即求 \(x\) 使得 \(f(x)=0\)). 而在最优化中, 牛顿法通常被运用于求解一个二次可微函数 \(f\) 的一阶导数 \(">
@@ -391,7 +391,7 @@
                 
               
 
-              <time title="Created: 2018-09-18 10:59:10 / Modified: 17:12:08" itemprop="dateCreated datePublished" datetime="2018-09-18T10:59:10+08:00">2018-09-18</time>
+              <time title="Created: 2018-09-18 10:59:10 / Modified: 17:15:01" itemprop="dateCreated datePublished" datetime="2018-09-18T10:59:10+08:00">2018-09-18</time>
             
 
             
@@ -459,6 +459,7 @@
 </blockquote>
 <h1 id="牛顿法简介">牛顿法简介</h1>
 <p>牛顿法是微积分学中, 通过迭代以求解可微函数 <span class="math inline">\(f\)</span> 的零点的一种算法 (即求 <span class="math inline">\(x\)</span> 使得 <span class="math inline">\(f(x)=0\)</span>). 而在最优化中, 牛顿法通常被运用于求解一个二次可微函数 <span class="math inline">\(f\)</span> 的一阶导数 <span class="math inline">\(f^{\prime}\)</span> 的零点 (即求 <span class="math inline">\(x\)</span> 使得 <span class="math inline">\(f^{\prime }(x)=0\)</span> , 同时也是 <span class="math inline">\(f\)</span> 的驻点. 因此从另一个角度而言，应用于最优化的牛顿法是搜索函数 <span class="math inline">\(f(x)\)</span> 的最小值或最大值的一种算法。</p>
+<a id="more"></a>
 <p>一维问题的牛顿法主要步骤如下: 取一个点 <span class="math inline">\(x_{0}\)</span> 为初值, 依如下公式迭代:</p>
 <p><span class="math display">\[\begin{equation}x_{n+1}=x_{n}-{\frac {f^{\prime }(x_{n})}{f^{\prime \prime }(x_{n})}}\end{equation}\label{newton_1}\]</span></p>
 <p>直至满足一定条件 (如 <span class="math inline">\(f^{\prime }(x_{n})=0\)</span> 或 <span class="math inline">\(x_{n+1}-x_{n}&lt;\varepsilon\)</span>, 其中 <span class="math inline">\(\varepsilon\)</span>为一个给定的足够小的常量) 后, 算法终止。</p>

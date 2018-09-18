@@ -394,7 +394,7 @@
                 
               
 
-              <time title="Created: 2018-09-18 10:59:10 / Modified: 17:12:08" itemprop="dateCreated datePublished" datetime="2018-09-18T10:59:10+08:00">2018-09-18</time>
+              <time title="Created: 2018-09-18 10:59:10 / Modified: 17:15:01" itemprop="dateCreated datePublished" datetime="2018-09-18T10:59:10+08:00">2018-09-18</time>
             
 
             
@@ -463,13 +463,13 @@
 </blockquote>
 <h1 id="牛顿法简介">牛顿法简介</h1>
 <p>牛顿法是微积分学中, 通过迭代以求解可微函数 <span class="math inline">\(f\)</span> 的零点的一种算法 (即求 <span class="math inline">\(x\)</span> 使得 <span class="math inline">\(f(x)=0\)</span>). 而在最优化中, 牛顿法通常被运用于求解一个二次可微函数 <span class="math inline">\(f\)</span> 的一阶导数 <span class="math inline">\(f^{\prime}\)</span> 的零点 (即求 <span class="math inline">\(x\)</span> 使得 <span class="math inline">\(f^{\prime }(x)=0\)</span> , 同时也是 <span class="math inline">\(f\)</span> 的驻点. 因此从另一个角度而言，应用于最优化的牛顿法是搜索函数 <span class="math inline">\(f(x)\)</span> 的最小值或最大值的一种算法。</p>
+<a id="more"></a>
 <p>一维问题的牛顿法主要步骤如下: 取一个点 <span class="math inline">\(x_{0}\)</span> 为初值, 依如下公式迭代:</p>
 <p><span class="math display">\[\begin{equation}x_{n+1}=x_{n}-{\frac {f^{\prime }(x_{n})}{f^{\prime \prime }(x_{n})}}\end{equation}\label{newton_1}\]</span></p>
 <p>直至满足一定条件 (如 <span class="math inline">\(f^{\prime }(x_{n})=0\)</span> 或 <span class="math inline">\(x_{n+1}-x_{n}&lt;\varepsilon\)</span>, 其中 <span class="math inline">\(\varepsilon\)</span>为一个给定的足够小的常量) 后, 算法终止。</p>
 <h1 id="一维问题的求解">一维问题的求解</h1>
 <p><span class="math inline">\(f(x)\)</span>在<span class="math inline">\(x=x_{n}\)</span>处的二阶泰勒展开式 <span class="math inline">\(f_{T}(x)\)</span> 为:</p>
 <p><span class="math display">\[\begin{equation}f_{T}(x)=f_{T}(x_{n}+\Delta x)\approx f(x_{n})+f^{\prime }(x_{n})\Delta x+{\frac {1}{2}}f^{\prime \prime }(x_{n})\Delta x^{2} \end{equation}\label{newton_1_tylor}\]</span></p>
-<p>我们希望找到这个函数的驻点（一阶导数为0）,对<span class="math inline">\(\eqref{newton_1_tylor}\)</span>求导得：</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/09/18/牛顿方法/#more" rel="contents">
@@ -591,7 +591,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-18 13:52:19" itemprop="dateModified" datetime="2018-09-18T13:52:19+08:00">2018-09-18</time>
+                <time title="Modified: 2018-09-18 17:15:35" itemprop="dateModified" datetime="2018-09-18T17:15:35+08:00">2018-09-18</time>
               
             
           </span>
@@ -643,27 +643,7 @@
 
       
         
-          <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-<p><strong>Table of Contents</strong></p>
-<ul>
-<li><a href="#简介">简介</a>
-<ul>
-<li><a href="#授权-会话管理-访问控制">授权, 会话管理, 访问控制</a></li>
-</ul></li>
-<li><a href="#session-id-的性质">Session Id 的性质</a>
-<ul>
-<li><a href="#session-id-的名称">Session Id 的名称</a></li>
-<li><a href="#session-id-的长度">Session Id 的长度</a></li>
-<li><a href="#session-id-的信息熵">Session Id 的信息熵</a></li>
-<li><a href="#session-id-的value">Session Id 的value</a></li>
-</ul></li>
-<li><a href="#会话管理的实现">会话管理的实现</a>
-<ul>
-<li><a href="#built-in-会话管理机制的实现">Built-in 会话管理机制的实现</a></li>
-</ul></li>
-</ul>
-<!-- markdown-toc end -->
-<h1 id="简介">简介</h1>
+          <h1 id="简介">简介</h1>
 <h2 id="授权-会话管理-访问控制">授权, 会话管理, 访问控制</h2>
 <p>一个web session指的是:</p>
 <blockquote>
@@ -675,6 +655,10 @@
 <p>每一个请求与响应的状态是独立的</p>
 </blockquote>
 <p>所以我们需要保持用户的信息，这里引入会话管理的概念，会话管理的简图如下：</p>
+<figure>
+<img src="fig1.png" alt="session management"><figcaption>session management</figcaption>
+</figure>
+<p>一般情况下，用户在得到访问授权之后，会得到一个session ID, 或者token, 这个标记会记录在之后的http请求交互中, 这个标识将用于用户之后的访问行为中标识用户已经拥有权限的标记。这个标记在之后的鉴权中，效果等同于应用的最高安全等级验证方式（密码，人脸，短信，视网膜等等）。由此这样一个标记的安全性是非常关键的。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/22/OWSAP-SESSION-MANAGEMENT-会话管理/#more" rel="contents">
